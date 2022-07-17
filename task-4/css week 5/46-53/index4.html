@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parent{height: 300px;width: 600px;
+            background-color: rgb(206, 209, 211);
+            margin: auto;
+        }
+        div{background-color: rgb(21, 159, 113);
+            display: flex;flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-around;
+            margin: 10px;
+            width: 30px;height: 60px;
+            color: rgb(253, 254, 255);
+            align-items: center;
+            
+            
+        }
+        .one{align-self: flex-end;}
+        .two{align-self: flex-start;width: 300px;}
+        .three{align-self: flex-end;}
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+</body>
+</html>

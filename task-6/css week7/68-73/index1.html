@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{position: relative;
+            width: 150px;height: 50px;text-align: center;padding-top: 30px;
+            background-color: orangered;
+            margin: 50px auto;
+            color: white;
+            
+        }
+        div::before{content: "";
+            position: absolute;
+            height: 90px;
+            width: 154px;
+            z-index: -1;
+            right: -2px;top: -10px;
+            transform: matrix(1,0.2,0.2,1,0,0);
+            background-color: orangered;
+        }
+        div::after{content: "";
+            position: absolute;
+            height: 90px;
+            width: 154px;
+            z-index: -2;
+            right: -2px;top: -10px;
+            transform: matrix(1,-0.2,-0.2,1,0,0);
+            background-color: orangered;
+            
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>Elzero</div>
+
+</body>
+</html>

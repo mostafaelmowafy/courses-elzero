@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root{--basic :#009688ff;--white:white;}
+        div{background-color: var(--basic);
+            box-sizing: border-box;
+            width: 150px; font-size: 22px;padding: 40px;margin: 150px auto;padding-left: 70px;
+            color: var(--white);
+            position: relative;
+        }
+        div::before{content: "";
+            position: absolute;
+            height: 130px;
+            border-left: solid var(--white) 5px;
+            transform: rotate(-10deg);
+            left: 0;top: 0;
+            margin-left: 40px;
+            margin-top: -10px;
+        }
+        div::after{content: "";
+            position: absolute;
+            height: 140px;
+            border-left: solid var(--white) 30px;
+            
+            transform:rotate(-10deg);
+            margin-left: -8px;
+            margin-top: -5px;
+            left: 0;top: 0px;}
+            
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>Elzero</div>
+</body>
+</html>

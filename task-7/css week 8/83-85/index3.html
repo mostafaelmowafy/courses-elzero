@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .parent{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between ;
+                margin: 20px auto ;
+            }
+        .parent div{
+            background-color: rgb(227, 231, 234);
+            text-align: center;
+            margin-bottom: 25px;
+            }
+        @media (min-width:1200px){
+            .parent{width: 1200px;}
+                
+            div{width: 580px;  padding-bottom: 25px ;}
+            .a{width: 1200px;}
+            h4{color: rgb(36, 202, 130);}
+            .d{width: 1200px;}    
+            }    
+
+        @media (min-width:992px) and (max-width:1200px){
+        .parent{width: 992px;}
+            
+        div{width: 320px; padding-bottom: 25px ;}
+        .a{width: 992px;}
+        h4{color: rgb(189, 0, 0);}    
+        }    
+        @media (min-width:768px) and (max-width:992px){
+            .parent{width: 768px;}
+                    
+            .parent div{width: 750px; padding-bottom: 25px ;}    
+            h4{color: rgb(0, 0, 0);}
+            }
+        @media (max-width:767px){
+        .parent{width: 440px;}
+                
+        .parent div{width: 440px; padding-bottom: 25px ;}    
+        h4{color: rgb(0, 0, 0);}
+        }    
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="a">
+            <h4>Product One</h4>
+            This Is Product
+        </div>
+        <div class="b">
+            <h4>Product Two</h4>
+            This Is Product
+        </div>
+        <div class="c">
+            <h4>Product Three</h4>
+            This Is Product
+        </div>
+        <div class="d">
+            <h4>Product Four</h4>
+            This Is Product
+        </div>
+    </div>
+</body>
+</html>

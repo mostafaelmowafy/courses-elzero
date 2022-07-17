@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        div[title]:not(.no-need ,div:nth-last-of-type(3),div:last-of-type) {color: red;}
+
+    </style>
+</head>
+<body>
+    <p>Testing</p>
+    <div>Testing</div>
+    <div>Testing</div>
+    <div title="Elzero">Elzero</div>
+    <div title="Hello">Elzero</div>
+    <div title="HTML">Elzero</div>
+    <div>Testing</div>
+    <div class="no-need" title="Elzero">Testing</div>
+    <div class="parent">
+        <div>Testing</div>
+        <p>Testing</p>
+        <div>Testing</div>
+        <div title="Elzero">Testing</div>
+        <div>Testing</div>
+        <div title="Elzero">Testing</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .one{order: 6;height: 20px;align-self: flex-end;}
+        .two{order: 5;}
+        .three{order: 2;height: 20px;}
+        .four{order: 3;}
+        .five{order: 4;}
+        .six{order: 1;}
+        .parent{height: 300px;width: 600px;
+            background-color: rgb(206, 209, 211);
+            margin: auto;
+        }
+        div{background-color: rgb(30, 106, 187);
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(94%/3);height: calc(100%/2);
+            justify-content: space-around;
+            
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+</body>
+</html>
