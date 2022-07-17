@@ -1,72 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        @keyframes anima {
-            from{
-                transform: rotate(0deg);
-            }
-            to{
-                transform: rotate(360deg);
-            }
-        }
-        div{
-            width: 50px;
-            height: 50px;
-            background-color: rgb(209, 211, 209);
-            position: relative;
-            margin: 20px auto;
-            border: solid 5px rgb(0, 120, 212);;
-            border-bottom-color: white;
-            border-radius: 50%;
-        }
-        div::before{position:absolute ;
-            content: "";
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            
-            border: solid 5px rgb(255, 225, 0);;
-            border-bottom-color: white;
-            left: -10px;top: -10px;
-            
-            
-        }
-        div::after{position: absolute;
-            content: "";
-            width: 70px;
-            height: 70px;
-            border: solid 5px rgb(0, 0, 0);;
-            border-bottom-color:white ;
-            border-radius: 50%;
-            
-            left: -15px;top: -15px;
-            
-            ;}
-        div:hover{
-            animation-name: anima;
-            animation-duration: 1.5s;
-            animation-iteration-count:infinite ;
-            animation-timing-function: linear;
-            
-        }
-        div:hover::before{
-            animation-name: anima;
-            animation-duration: 2s;
-            animation-iteration-count:infinite ;
-            animation-timing-function: linear;
-            
-        }
-        div:hover::after{
-            animation-name: anima;
-            animation-duration: 3s;
-            animation-iteration-count:infinite ;
-            animation-timing-function: linear;
-            
-        }
-        
-        
-    </style>
+    <link rel="stylesheet" href="style2.css">
+
     <title>Document</title>
 </head>
 <body>

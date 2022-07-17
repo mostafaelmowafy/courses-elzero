@@ -1,35 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body{perspective: 400px;}
-        div{position: relative;
-            width: 200px;height: 200px;
-            margin: 100px auto;
-            transform-style: preserve-3d ;
-            transition: transform 1s ;
-            
-        }
-        div:hover{transform: rotatex(-180deg);}
-        div::before{
-            content: "Front";
-            position: absolute;
-            width: 200px;height: 200px;
-            background-color: rgb(0, 183, 255);color: white;
-            z-index: 2;
-            display: flex;align-items: center;justify-content: center;
-            backface-visibility: hidden;
-        }
-        div::after{
-            content: "Back";
-            position: absolute;
-            width: 200px;height: 200px;
-            background-color: rgb(173, 136, 136);color: white;
-            transform: rotatex(180deg);
-            display: flex;align-items: center;justify-content: center;
-            backface-visibility: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="style5.css">
+
     <title>Document</title>
 </head>
 <body>

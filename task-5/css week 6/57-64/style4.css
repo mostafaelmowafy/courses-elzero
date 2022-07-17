@@ -1,0 +1,18 @@
+div{background-color: rgb(63, 171, 238);color: white;text-align: center;box-sizing: content-box; padding-top: 18px;}
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap: 15px;
+    padding: 15px;
+    margin: auto;
+    }
+    
+    .eight{grid-row-start: 1;grid-column: span 3;}
+    .two{grid-row-start: 2; grid-column-start: 1;grid-column: span 2;}
+    .one{grid-row-start: 6;grid-column: span 3;}
+    .five{grid-row-start: 3;grid-row-end: 6;grid-column-start: 2;grid-column-end: 4;padding-top: 90px;}

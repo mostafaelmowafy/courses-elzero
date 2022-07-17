@@ -1,38 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .layout{background-color: aliceblue;height: 100vh;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: 50px auto 50px;
-            grid-template-areas: "head head head head" "content content content aside" "footer footer footer footer";
+    <link rel="stylesheet" href="style2.css">
 
-        }
-        header{grid-area: head;
-            background-color: rgb(0, 149, 255);    
-        }
-        section{grid-area: content;background-color: rgb(255, 119, 0);}
-        aside{grid-area: aside;background-color: rgb(44, 81, 107);}
-        footer{grid-area: footer;background-color: rgb(33, 172, 79);}
-        header:before{
-            content: "Header";color: white;
-            position: absolute;padding: 15px;
-        }
-        section:before{
-            content: "Section";color: white;
-            position: absolute;padding: 15px;
-        }
-        aside:before{
-            content: "Aside";color: white;
-            position: absolute;padding: 15px;
-        }
-        footer:before{
-            content: "Footer";color: white;
-            position: absolute;padding: 15px;
-        }
-
-    </style>
     <title>Document</title>
 </head>
 <body>
