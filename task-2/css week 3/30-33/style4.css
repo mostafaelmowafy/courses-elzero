@@ -1,0 +1,6 @@
+img {width: 50px;height: 50px; margin: 4px;}
+table {text-align: center; width: 700px;background-color: rgb(201, 201, 201); }
+.view {padding: 1px; background-color: rgb(56, 146, 219);margin-right:3px;}
+.delete {padding: 1px;background-color: rgb(179, 41, 41); }
+table, td,th{border-collapse: collapse;border: solid white 1px;height: 50px;}
+th {background-color: rgb(41, 40, 40);color: rgb(255, 255, 255);}
