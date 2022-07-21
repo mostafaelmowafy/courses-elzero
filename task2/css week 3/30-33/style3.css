@@ -1,0 +1,5 @@
+main{ width: 400px; margin: auto; }
+.par {background-color: rgb(187, 187, 179); margin: 10px;padding: 10px; list-style-type: none ;}
+#l1 li ,#l2 li ,#l3 li {background-color: rgb(255, 255, 255); padding: 4px;margin-bottom: 5px;}
+#l2 {list-style-type:upper-roman; }
+#l3 {list-style-position:inside;padding: 0px; }
