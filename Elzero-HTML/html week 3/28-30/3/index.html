@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form method="get">
+            <div>
+                <label for="name">User Name</label><br>
+                <input id="name" type="text" require autofocus minlength="5" maxlength="20" placeholder="Write your name"><hr>
+            </div>
+            <div></div>
+                <label for="email">Email</label><br>
+                <input id="email" type="email" require readonly value="o@o.com" name="email" ><hr>
+            </div>
+            <div>
+                <label>Token</label><br>
+                <input type="hidden" value="b92f1fc2fce391ad7af633723afd3055" >
+            </div>
+            
+            <br>
+            <div>
+                <label for="choose1">Choose your skills</label>
+                <select id="choose1" multiple name="skills">
+                    <option value="Problem Solving">Problem Solving</option>
+                    <option value="Logical Thinking">Logical Thinking,</option>
+                    <option value="Advanced Search">Advanced Search,</option>
+                    <option value="Analysis" selected> Analysis</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="choose2">Choose your job</label>
+                <select id="choose2" name="job">
+                    <option value="Front-End Developer">Front-End Developer</option>
+                    <option value="Back-End Developer" selected> Back-End Developer</option>
+                    <option value="Business Analyst"> Business Analyst</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Scrum Master"> Scrum Master</option>
+                    <label for="choose2">Choose your job</label>
+                </select>
+            </div><br>
+            <div>
+                <label for="choose3">Choose your languages</label>
+                <select id="choose3" name="languages">
+                    <optgroup label="php"></optgroup>
+                        <option value="PHP V5.0">V5.0</option>
+                        <option value="PHP V7.0" > V7.0</option>
+                        <option value="PHP V8.0"> V8.0</option>
+                    <optgroup label="python"></optgroup>
+                        <option value="python V2.0">V2.0</option>
+                        <option value="python V3.0"> V3.0</option>
+                        <option value="python V3.9"> V3.9</option>
+                </select>
+            </div><br>
+            <div>
+                <textarea name="textarea" cols="32" rows="11" placeholder="Write Here Why You Want To Learn Programming" > </textarea>          
+            </div><br>
+            <div>
+                <input type="reset" value="empty">
+                <input type="submit" value="send">
+            </div>
+
+        </form>
+    </body> 
+</html> 

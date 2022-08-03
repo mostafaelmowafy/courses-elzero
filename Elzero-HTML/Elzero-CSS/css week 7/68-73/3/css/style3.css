@@ -1,0 +1,29 @@
+div{
+    position: relative;
+    width: 200px; height: 200px;
+    background-color: #607d8bff;
+    left: 50%;
+    transform: translate(-50% ,50%);
+    border-bottom: solid black 4px;
+}
+div::before{
+    content: "";
+    position: absolute;
+    width: 135px;height: 135px;
+    background-color: rgb(0, 0, 0);
+    transform: rotate(-45deg);
+    z-index: -1;
+    top: -68px;
+    left: 31px;
+    border: solid white 4px;
+    border-top: 0px;
+    border-right: 0px;
+}
+div::after{
+    content: "Elzero";
+    position: absolute;
+    bottom: 0;
+    color: aliceblue;
+    z-index: 8;
+    margin: 5px;
+}

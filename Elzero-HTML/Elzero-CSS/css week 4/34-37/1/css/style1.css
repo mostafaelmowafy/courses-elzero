@@ -1,0 +1,2 @@
+div{ display: flex; width: 300px; height: 60px;background-color: rgb(226, 226, 226);margin: auto;margin-top: 10px;align-items: center; justify-content: center;}
+    :empty{background-color: rgb(255, 0, 0);}

@@ -1,0 +1,1 @@
+div div:not( div:first-of-type,div:last-of-type ),p{color: red;}

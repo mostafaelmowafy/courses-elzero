@@ -1,0 +1,23 @@
+input:focus{color: rgb(0, 0, 0 );outline: none;}
+input{
+    width: 600px;padding: 15px;
+    background-color: rgb(186, 221, 251);
+    caret-color : red;
+    color: rgb(0, 0, 0 ,60%) ;
+    border: none;
+}
+div{width: 600px;
+    margin: 20px auto;
+    background-color: rgb(186, 221, 251);
+    position: relative;}
+div:before{
+    content: "";
+    position: absolute;
+    width: 630px;     
+    height: 5px;
+    bottom: -5px;
+    left: 0px;
+    background-image: linear-gradient(to right ,rgb(216, 87, 13) 0%,rgb(216, 87, 13) 50%,
+    rgb(3, 118, 38) 50%,rgb(3, 118, 38) 100%);
+    
+}

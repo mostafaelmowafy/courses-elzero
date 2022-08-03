@@ -1,0 +1,7 @@
+.par {display: flex; justify-content: center; align-items: center; height: 740px;}
+.link{
+    width: 200px; height: 150px;  background-color: rgb(31, 231, 164);display: flex; justify-content: center;  align-items: center;border-bottom: solid rgb(0, 133, 126) 20px;
+}
+a{
+    padding : 8px; text-decoration: none; font-size: 62px;
+}

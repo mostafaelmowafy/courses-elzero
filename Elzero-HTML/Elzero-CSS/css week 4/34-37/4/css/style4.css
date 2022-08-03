@@ -1,0 +1,2 @@
+p{background-color: rgb(211, 211, 211);width: 350px; height: 40px;margin: auto;margin-bottom: 10px;position: relative;text-align: center;padding-top: 20px;border-right:solid crimson 4px ; counter-increment:p-coun ;}
+p::before{content: counter(p-coun);position: absolute; background-color: crimson;height: 40px;width: 50px;padding-top: 20px;bottom: 0px;left: 0;}
