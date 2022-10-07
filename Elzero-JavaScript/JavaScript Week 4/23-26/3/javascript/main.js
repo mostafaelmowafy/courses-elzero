@@ -1,0 +1,1 @@
+console.log( -Number.parseInt(Number.MAX_SAFE_INTEGER * Number.MIN_SAFE_INTEGER) - Number.parseInt(Number.MAX_SAFE_INTEGER * Number.MIN_SAFE_INTEGER) ); // 16

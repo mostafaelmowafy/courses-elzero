@@ -1,0 +1,1 @@
+console.log(" %cElzero %cweb %cschool","color:red;" ,"color:green;" ,"background-color:blue; color:white;")
