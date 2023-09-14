@@ -1,0 +1,40 @@
+/* ---------START-FONTS--------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* ---------END-FONTS--------- */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* ---------START-FORM--------- */
+form{
+    background-color: beige;
+    width: 500px;
+    margin-block-start: 20px;
+    outline: 2px rgb(0, 0, 0) dashed;
+    padding: 20px;
+    font-family: cairo;
+    font-size: 16px;
+}
+form ul{
+    display: block;
+    margin-block-end: 20px;
+    margin-block-start: 3px;
+    
+}
+form ul li{
+    cursor: pointer;
+    width: fit-content;
+}
+form select{
+    display: block;
+    margin-block-end: 20px;
+    margin-block-start: 3px;
+    cursor: pointer;
+}
+
+/* ---------END-FORM--------- */
