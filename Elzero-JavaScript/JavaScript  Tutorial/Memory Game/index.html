@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Js Slider</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="control-buttons">
+            <span>Start Game</span>
+        </div>
+        <div class="info-container">
+            <div class="name">
+                <b>Hello:</b> <span></span>
+            </div>
+            <div class="time">
+                <b>Time:</b> <span>02:00</span>
+            </div>
+            <div class="tries">
+                <b>Wrong Tries:</b> <span>0</span>
+            </div>
+        </div>
+        <div class="memory-game-blocks">
+            <div class="game-block" data-technology="baghbhan">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/baghbhan.jpg" alt="baghbhan">
+                </div>
+            </div>
+            <div class="game-block" data-technology="baghbhan">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/baghbhan.jpg" alt="baghbhan">
+                </div>
+            </div>
+            <div class="game-block" data-technology="chicken">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/chicken.jpg" alt="chicken">
+                </div>
+            </div>
+            <div class="game-block" data-technology="chicken">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/chicken.jpg" alt="chicken">
+                </div>
+            </div>
+            <!-- <div class="game-block" data-technology="dog">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/dog.jpg" alt="dog">
+                </div>
+            </div>
+            <div class="game-block" data-technology="dog">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/dog.jpg" alt="dog">
+                </div>
+            </div>
+            <div class="game-block" data-technology="fish">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/fish.jpg" alt="fish">
+                </div>
+            </div>
+            <div class="game-block" data-technology="fish">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/fish.jpg" alt="">
+                </div>
+            </div>
+            <div class="game-block" data-technology="fox">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/fox.jpg" alt="fox">
+                </div>
+            </div>
+            <div class="game-block" data-technology="fox">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/fox.jpg" alt="fox">
+                </div>
+            </div>
+            <div class="game-block" data-technology="gazelle">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/gazelle.jpg" alt="gazelle">
+                </div>
+            </div>
+            <div class="game-block" data-technology="gazelle">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/gazelle.jpg" alt="gazelle">
+                </div>
+            </div>
+            <div class="game-block" data-technology="horse">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/horse.jpg" alt="horse">
+                </div>
+            </div>
+            <div class="game-block" data-technology="horse">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/horse.jpg" alt="horse">
+                </div>
+            </div>
+            <div class="game-block" data-technology="panda">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images\panda.jpg" alt="panda">
+                </div>
+            </div>
+            <div class="game-block" data-technology="panda">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/panda.jpg" alt="panda">
+                </div>
+            </div>
+            <div class="game-block" data-technology="puma">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/puma.jpg" alt="puma">
+                </div>
+            </div>
+            <div class="game-block" data-technology="puma">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/puma.jpg" alt="puma">
+                </div>
+            </div>
+            <div class="game-block" data-technology="rabbit">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/rabbit.jpg" alt="rabbit">
+                </div>
+            </div>
+            <div class="game-block" data-technology="rabbit">
+                <div class="face front"></div>
+                <div class="face back">
+                <img decoding="async" src="images/rabbit.jpg" alt="rabbit">
+                </div>
+            </div> -->
+        </div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Wrong Tries</th>
+            </tr>
+        </table>
+        <audio id="success" src="sounds/success.mp4" preload="auto"></audio>
+        <audio id="fail" src="sounds/fail.mp3" preload="auto"></audio>
+        <audio id="start" src="sounds/start.mp3" preload="auto" loop></audio>
+        <audio id="game" src="sounds/game.mp3" preload="auto" loop></audio>
+        <audio id="end" src="sounds/end.mp3" preload="auto"></audio>
+        <script src="js/main.js"></script>
+    </body>
+</html>

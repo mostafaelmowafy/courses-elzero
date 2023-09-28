@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Tahoma, sans-serif;
+}
+.control-buttons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(74, 110, 128, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-buttons span {
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: calc(.7vw + 16px);
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.control-buttons .again{
+    background-color: #5498f7;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: calc(.7vw + 16px);
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.control-buttons .winner {
+    background-color: #36f44c9c;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: calc(.7vw + 16px);
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.info-container {
+    width: 95vw;
+    margin: 20px auto;
+    background-color: #F6F6F6;
+    padding: 20px;
+    font-size: calc(.5vw + 15px);
+    overflow: hidden;
+    border: 2px solid #2196f3;
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:768px){
+    .info-container{
+        flex-direction: column;
+        line-height: 30px;
+        }
+}
+/* .info-container .name {
+    float: left;
+    width: 50%;
+}
+.info-container .tries {
+    float: right;
+    width: 50%;
+    text-align: right;
+} */
+.memory-game-blocks {
+    display: flex;
+    width: 98vw;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content: center;
+}
+.memory-game-blocks.no-clicking {
+    pointer-events: none;
+}
+.memory-game-blocks .game-block {
+    height: 15vw;
+    min-height: 120px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    margin: 0 10px 20px;
+    width: 15vw;
+    min-width: 120px;
+}
+.memory-game-blocks .game-block .front {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.memory-game-blocks .game-block .front:before {
+    content: '!';
+    color: #FFF;
+    font-size: calc(.3vw + 120px);
+    font-weight: bold;
+}
+.memory-game-blocks .game-block .back {
+    background-color: #607D8B;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.memory-game-blocks .game-block .back img {
+    width: 14vw;
+    min-width: 110px;
+    height: 14vw;
+    min-height: 110px;
+}
+@media(max-width:587px){
+    .memory-game-blocks .game-block {
+        min-height: 100px;
+        min-width: 100px;
+    }
+    .memory-game-blocks .game-block .front:before {
+        font-size: calc(.3vw + 100px);
+    }
+    .memory-game-blocks .game-block .back img {
+        min-width: 90px;
+        min-height: 90px;
+    }
+}
+@media(max-width:587px){
+    .memory-game-blocks .game-block {
+        min-height: 80px;
+        min-width: 80px;
+    }
+    .memory-game-blocks .game-block .front:before {
+        font-size: calc(.3vw + 70px);
+    }
+    .memory-game-blocks .game-block .back img {
+        min-width: 70px;
+        min-height: 70px;
+    }
+}
+@media(max-width:420px){
+    .memory-game-blocks .game-block {
+        min-height: 55px;
+        min-width: 55px;
+    }
+    .memory-game-blocks .game-block .front:before {
+        font-size: calc(.3vw + 50px);
+    }
+    .memory-game-blocks .game-block .back img {
+        min-width: 45px;
+        min-height: 45px;
+    }
+}
+.memory-game-blocks .game-block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: 5px solid #2196F3;
+}
+.memory-game-blocks .game-block.is-flipped,
+.memory-game-blocks .game-block.has-match {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 20px;
+    width: 50vw;
+    margin: 80px auto 0;
+    text-align: center;
+}
+table tr{
+    border-bottom :  1px solid black ;
+    border-radius: 5px;
+}
+table th{
+    background-color: #ae352d;
+    color: white;
+}
+td ,th{
+    padding: 10px 20px;
+}
