@@ -5,11 +5,40 @@ let orderArray = Array.from(Array(blocks.length).keys());
 var userName;
 var s1,s2,m1,m2;
 var triesElement;
-window.onload = ()=>{
-    var start = document.getElementById('start');
-    start.play()
+let winTime;
+let userArray = [];
+
+class User{
+    constructor(name,duration,tries){
+        this.name= name;
+        this.duration = duration;
+        this.tries = tries;
+    }
 }
-const userArray = [];
+function SortArray(array){
+    array.sort(function(a,b){
+        var Aname =a.name.toLowerCase()
+        var Bname =b.name.toLowerCase()
+        if(Aname>Bname){
+            return 1;
+        }else if(Aname<Bname){
+            return -1;
+        }else{
+            return 0;
+        }
+        
+    })
+}
+window.onload = ()=>{
+    if(window.localStorage.getItem("userArray")){
+        userArray = JSON.parse(window.localStorage.getItem("userArray"));
+        
+        creatAllResult();
+    }
+    var start = document.getElementById('start');
+    start.play();
+}
+
 function myGame(){
     userName = prompt("What's Your Name?");
     
@@ -84,7 +113,7 @@ blocks.forEach((block,index)=>{
     })
 })
 function flipBlock (selectedBlock){
-    var duration = `${m2}${1 - m1}:${5 - s2}${9 - s1}`
+    winTime = `${m2}${1 - m1}:${5 - s2}${9 - s1}`
     selectedBlock.classList.add('is-flipped')
     let allFlipped = blocks.filter(f=> f.classList.contains('is-flipped'))
     if(allFlipped.length === 2){
@@ -93,28 +122,47 @@ function flipBlock (selectedBlock){
     }
     let hasMatch = blocks.filter(f=> f.classList.contains('has-match'));
     if(hasMatch.length == blocks.length){
+        
         var timeOut = document.createElement("div");
         timeOut.className = 'control-buttons'
         var Winner = document.createElement("p");
         Winner.className = 'winner'
-        var WinnerText = document.createTextNode(`Congratulation ${userName} ,You win in ${duration}`);
+        var WinnerText = document.createTextNode(`Congratulation ${userName} ,You win in ${winTime}`);
         Winner.appendChild(WinnerText)
         timeOut.appendChild(Winner)
         document.body.appendChild(timeOut)
         
         var Again = document.createElement("button");
-        Again.className = 'again'
+        Again.className = 'again';
         var againText = document.createTextNode('Play Again');
-        Again.appendChild(againText)
-        timeOut.appendChild(Again)
-        document.body.appendChild(timeOut)
-        Again.onclick = function (){myGame()}
+        Again.appendChild(againText);
+        timeOut.appendChild(Again);
+        document.body.appendChild(timeOut);
+        Again.onclick = function (){myGame()};
         
-        var results = document.querySelector("table");
-        var content = `<tr> <td>${userName}</td> <td>${duration}</td> <td> ${triesElement.innerHTML} </td> </tr>`;
-        results.innerHTML += content;
-        document.body.appendChild(results);
+        let newUser = new User(userName,winTime,triesElement.innerHTML)
+        userArray.push(newUser)
+        window.localStorage.setItem("userArray",JSON.stringify(userArray));
+
+        creatResult();
+        triesElement.innerText=0
     }
+}
+function creatResult(){
+    var results = document.querySelector("table");
+    var content = `<tr> <td>${userName}</td> <td>${winTime}</td> <td> ${triesElement.innerHTML} </td> </tr>`;
+    results.innerHTML += content;
+    document.body.appendChild(results);
+}
+function creatAllResult(){
+    var results = document.querySelector("table");
+    SortArray(userArray)
+    for(let i=0; i<userArray.length; i++){
+        var content = `<tr> <td>${userArray[i].name}</td> <td>${userArray[i].duration}</td> <td> ${userArray[i].tries} </td> </tr>`;
+        results.innerHTML += content;
+    }
+    
+    document.body.appendChild(results);
 }
 function stopClicking(){
     blocksContainer.classList.add('no-clicking');
