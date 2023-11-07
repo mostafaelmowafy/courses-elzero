@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: Tahoma, Arial;
+}
+.repos-container{
+    width: 90vw;
+    margin: auto;
+    background-color: #F6F6F6;
+}
+.get-repos{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #EEE;
+}
+
+.get-repos input{
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: calc(10px + 1vw);
+}
+.get-repos input:focus{
+    outline-color: brown;
+}
+.get-repos .get-button{
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: calc(10px + 1vw);
+    margin-inline: 20px;
+}
+@media(max-width:461px){
+    .get-repos{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .get-repos input{
+        width: 90vw;
+    }
+}
+.show-data{
+    padding: 20px;
+    
+    font-size: calc(10px + 1vw);
+}
+.show-data div{
+    padding: 15px 20px;
+    transition-duration: 1s;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #e2f0fa;
+}
+.show-data div:hover{
+    box-shadow: 0px 5px 20px rgb(77, 110, 168);
+    transform: scale(1.01);
+}
+.show-data div:not(:last-of-type){
+    margin-bottom: 30px;
+}
+.show-data div .nameSpan{
+    line-height: 40px;
+    font-size: calc(11px + 1vw);
+}
+.show-data div .desSpan{
+    color: rgb(59, 58, 58);
+    font-size: calc(11px + 1vw);
+}
+.show-data div b{
+    color: black;
+}
+.show-data div span{
+    display: block;
+}
+.show-data .starsSpan{
+    line-height: 40px;
+    font-size: calc(11px + 1vw);
+    color: gold;
+}
+.show-data div a{
+    text-decoration: none;
+    background-color: rgba(0, 128, 0, 0.6);
+    color: white;
+    padding: 5px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-block: 10px;
+    box-shadow: 0px 0px 5px rgb(88, 138, 88);
+    transition-duration: 1s;
+}
+.show-data div a:hover{
+    text-decoration: none;
+    background-color: rgba(0, 128, 0);
+}
