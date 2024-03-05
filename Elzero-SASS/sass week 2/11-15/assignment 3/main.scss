@@ -1,0 +1,44 @@
+$names:
+    "books" 20px red 18,
+    "games" 30px green 18,
+    "dvds" 20px blue;
+
+@each $class, $padding, $color, $fs in $names{
+    @if($fs){
+        .#{$class}{
+            padding: $padding;
+            font-size: $fs +px;
+            border-bottom: 2px solid $color;
+            color: $color;
+        }
+    }@else{
+        .#{$class}{
+            padding: $padding;
+            font-size: 16px;
+            border-bottom: 2px solid $color;
+            color: $color;
+        }
+    }
+}
+// Output
+
+// .books {
+//     padding: 20px;
+//     font-size: 18px;
+//     border-bottom: 2px solid red;
+//     color: #444;
+// }
+
+// .games {
+//     padding: 30px;
+//     font-size: 18px;
+//     border-bottom: 2px solid green;
+//     color: #444;
+// }
+
+// .dvds {
+//     padding: 20px;
+//     font-size: 16px;
+//     border-bottom: 2px solid blue;
+//     color: #444;
+// }

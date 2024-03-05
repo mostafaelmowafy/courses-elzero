@@ -1,0 +1,177 @@
+/* التكليف 1*/
+.content >{
+    .box{
+        padding: 15px;
+        >{
+            .title{
+                font-size: 18px;
+            }
+        }
+    }
+    .cat{
+        padding: 15px;
+    }
+}
+.content{
+    &.premium{
+        &:before{
+        content: "Premium Box";
+        }
+        &:hover{
+            background-color: #eee;
+        }
+    }
+}
+
+/* التكليف 2*/
+.class > .child{
+    padding: 10px;
+}
+.class > {
+    .child {
+        padding: 10px;
+    }
+}
+.class  {
+    > .child {
+        padding: 10px;
+    }
+}
+.class  {
+    > {
+        .child {
+            padding: 10px;
+        }
+    }
+}
+
+/* التكليف 3*/
+.class {
+    &{
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+/* التكليف 4*/
+.parent {
+    & + .sibling {
+        margin: auto {
+            top: 10px;
+        }
+        & ~ .last {
+            padding: 10px;
+        }
+    }
+}
+// Output
+// .parent + .sibling{
+//     margin: auto;
+//     margin-top: 10px;
+// }
+
+// .parent + .sibling ~ .last{
+//     padding: 10px;
+// }
+
+/* التكليف 5*/
+.widget{
+    background-color: white;
+    padding: 20px;
+}
+.main-border{
+    border: 1px solid #CCC;
+}
+.my-class{
+    @extend .main-border;
+    @extend .widget;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+/* التكليف 6*/
+%widget {
+    background-color: white;
+    padding: 20px;
+}
+%main-border {
+    border: 1px solid #CCC
+}
+.my-class{
+    @extend %widget;
+}
+.my-class{
+    @extend %main-border;
+}
+.my-class {
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+/* التكليف 7*/
+.box{
+    h2{
+        font-size: 20px;
+    }
+    p{
+        @extend h2;
+    }
+}
+
+$mobile: "max-width: 575px";
+@media($mobile){
+    .box{
+        h2{
+            font-size: 16px;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/* التكليف 8*/
+// The Code
+// Do Not Edit Here
+$red: #e91e63;
+$green: #009688;
+
+// Add What You Want Here
+$link-color:$green;
+$link-hover:$red;
+// Do Not Edit Here
+.box a {
+    color: $link-color;
+    &:hover {
+        color: $link-hover;
+}
+}
+
+/* التكليف 9*/
+// - Project_Folder
+// --- Helpers
+// ------ _vars.scss
+// ------ _functions.scss
+// --- Layout
+// ------ _header.scss
+// ------ _footer.scss
+@import "./Layout/footer";
+@import "./Layout/header";
+@import "./Helpers/functions";
+@import "./Helpers/vars";
+.test-var{
+    color: $black-color;
+}
+
+/* التكليف 10*/
+
+.box {
+    font-size: 20px;
+    &-holder {
+        width: 1000px;
+        &-content {
+            margin: auto;
+        }
+    }
+}
+

@@ -1,0 +1,20 @@
+.books {
+  padding: 20px;
+  font-size: 18px;
+  border-bottom: 2px solid red;
+  color: red;
+}
+
+.games {
+  padding: 30px;
+  font-size: 18px;
+  border-bottom: 2px solid green;
+  color: green;
+}
+
+.dvds {
+  padding: 20px;
+  font-size: 16px;
+  border-bottom: 2px solid blue;
+  color: blue;
+}/*# sourceMappingURL=main.css.map */

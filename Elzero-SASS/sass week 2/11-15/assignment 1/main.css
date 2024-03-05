@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* التكليف الأول */
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-color: red;
+  top: -40px;
+}
+
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-color: red;
+  right: -40px;
+}
+
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: red;
+  bottom: -40px;
+}
+
+.element:before {
+  content: "";
+  position: absolute;
+  border: 20px solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right-color: red;
+  left: -40px;
+}/*# sourceMappingURL=main.css.map */

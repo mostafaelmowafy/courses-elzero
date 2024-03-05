@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* التكليف 1 */
+.school {
+  padding: 20px;
+  direction: ltr;
+  margin-left: 20px;
+}
+
+.school .school-box {
+  padding: 10px;
+}
+
+.school:hover .school-box {
+  background-color: #eee;
+}
+
+/* التكليف 2 */
+/* Theme Version: 1.0 */
+/* Website Theme Main Color Is: red */
+/* Website Theme Alternate Color Is: blue */
+/* التكليف 3 */
+.class {
+  color: blue;
+}
+
+/* التكليف 4 */
+.class {
+  color: black;
+}
+
+/* التكليف 5 */
+.box {
+  background-color: #EEE;
+}/*# sourceMappingURL=main.css.map */

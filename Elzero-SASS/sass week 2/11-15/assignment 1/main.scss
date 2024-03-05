@@ -1,0 +1,104 @@
+/* التكليف الأول */
+
+@mixin arrow($dire){
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    @if $dire == top or $dire == bottom {
+        left: 50%;
+        transform: translateX(-50%);
+        @if $dire == top{
+            border-bottom-color: red;
+        }@else{
+            border-top-color: red;
+        }
+        
+    }@else{
+        top: 50%;
+        transform: translateY(-50%);
+        @if $dire == right{
+            border-left-color: red;
+        }@else{
+            border-right-color: red;
+        }
+    }
+    #{$dire}: -40px;
+}
+
+.element {
+    &:before {
+        @include arrow("top");
+    }
+}
+
+//   // Output
+
+// .element:before {
+//     content: "";
+//     position: absolute;
+//     border: 20px solid transparent;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     top: -40px;
+//     border-bottom-color: red;
+// }
+
+//   /////////////////////////////
+
+.element {
+    &:before {
+        @include arrow("right");
+    }
+}
+
+//   // Output
+
+// .element:before {
+//     content: "";
+//     position: absolute;
+//     border: 20px solid transparent;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     right: -40px;
+//     border-left-color: red;
+// }
+
+//   /////////////////////////////
+
+.element {
+    &:before {
+        @include arrow("bottom");
+    }
+}
+
+//   // Output
+
+// .element:before {
+//     content: "";
+//     position: absolute;
+//     border: 20px solid transparent;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     bottom: -40px;
+//     border-top-color: red;
+// }
+
+//   /////////////////////////////
+
+.element {
+    &:before {
+        @include arrow("left");
+    }
+}
+
+//   // Output
+
+// .element:before {
+//     content: "";
+//     position: absolute;
+//     border: 20px solid transparent;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     left: -40px;
+//     border-right-color: red;
+// }

@@ -1,0 +1,31 @@
+// Write Mixin Code Here
+@mixin placeholder{
+    &::placeholder{@content};
+    &:-moz-placeholder{@content};
+    &::-moz-placeholder{@content};
+    &:-ms-input-placeholder{@content};
+    &::-webkit-input-placeholder{@content};
+}
+// Using
+textarea {
+    @include placeholder {
+        color: #777;
+    }
+}
+
+//   // Output
+//   textarea.placeholder {
+//     color: #777;
+//   }
+//   textarea:-moz-placeholder {
+//     color: #777;
+//   }
+//   textarea::-moz-placeholder {
+//     color: #777;
+//   }
+//   textarea:-ms-input-placeholder {
+//     color: #777;
+//   }
+//   textarea::-webkit-input-placeholder {
+//     color: #777;
+//   }

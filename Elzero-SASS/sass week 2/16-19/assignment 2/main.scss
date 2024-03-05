@@ -1,0 +1,18 @@
+// SASS Code
+@function get-total($numbers...){
+    $sum: 0;
+    @each $number in $numbers {
+        $sum: $sum + $number;
+    }
+    @return $sum;
+}
+.box {
+    top: get-total(100, 50, 20);
+    right: get-total(100, 50);
+}
+
+// Output
+//   .box {
+//     top: 170;
+//     right: 150;
+//   }
